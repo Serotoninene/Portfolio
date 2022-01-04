@@ -1,0 +1,57 @@
+/* VARIABLES */
+$light : #F3EBE7;
+$medium : #707070;
+$dark : #2B2B2B;
+
+
+*{
+  margin: 0 ;
+  padding : 0;
+  list-style: none;
+  box-sizing: border-box;
+  font-family: futura;
+  font-weight: 400 ;
+  letter-spacing: 1px;
+  color : $medium;
+}
+
+
+body{
+  background-color: $light;
+}
+
+/* SERVICES */
+.container{
+  width: 90%;
+  margin: 0 auto;
+}
+
+.row{
+  display: grid;
+  grid-template-columns: repeat(12,1fr) ;
+}
+
+.flex{
+  display: flex;
+}
+
+.absolute{
+  position: absolute;
+}
+
+.relative{
+  position: relative;
+}
+
+.resp{
+  width:100%;
+}
+
+.border{
+  border: solid 1px $dark;
+}
+
+.none{
+  display: none;
+}
+

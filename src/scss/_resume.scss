@@ -1,0 +1,18 @@
+#resume{
+ .cv{
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin-top: 50px;
+  }
+
+  .cv img{
+    width: 30%;
+    margin: 25px;
+    transition: width 0.4s ease-in-out;
+
+    &:hover {
+      width: 95%;
+    }
+  }
+}

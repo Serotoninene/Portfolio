@@ -1,0 +1,73 @@
+{% extends 'fr/base_fr.html.twig' %}
+
+{% block title %} My Projects {% endblock title %}
+
+{% block styles %}
+    <link rel="stylesheet" href="{{ asset('css/aos.css') }}">
+{% endblock styles %}
+
+{% block body %}
+
+    <body id="projects">
+
+        <section class="container">
+            <hr>
+            <div class="row">
+                <div class = "description flex">
+                    <h1> SEROTONINENE</h1>
+
+                    <div>
+                        <h2> DESCRIPTION</h2>
+                        <p> Serotoninene est mon alter ego illustrateur, la journée je travaille en tant que développeur web et la nuit, je combats le crime en dessinant des illustrations. J'ai conçu ce site web pour présenter et vendre certaines de mes oeuvres. </p>
+                    </div>
+                </div>
+
+                <div class="video">
+                    <video width="100%" src="{{ asset('assets/video/serotoninene.mp4') }}" autoplay loop preload muted
+                    ></video>
+                </div>
+            </div>
+        </section>
+        <section class="container">
+            <hr>
+            <div class="row">
+                <div class = "description flex">
+                    <h1> 150 </h1>
+
+                    <div>
+                        <h2> DESCRIPTION</h2>
+                        <p> Projet créé main dans la main avec mon ami entrepreneur Tristan Bochu : un réseau social mettant en avant les relations sincères et humaines.</p>
+                    </div>
+                </div>
+
+                <div class="video flex">
+                    <img src="{{ asset('assets/photos/150_presentation2.png') }}" alt="150 Project" class="resp">
+                </div>
+            </div>
+        </section>
+        <section class="container">
+            <hr>
+            <div class="row">
+                <div class = "description flex">
+                    <h1> SALUT.</h1>
+
+                    <div>
+                        <h2> DESCRIPTION</h2>
+                        <p> Mon projet fil rouge durant mon bootcamp, "Salut." est un collectif fictionnel de 3 artistes - illustrateurs et photographes - désirant un portfolio pour présenter et vendre leurs oeuvres. </p>
+
+                    </div>
+                </div>
+                <div class="video">
+                    <video width="100%" src="{{ asset('assets/video/salut.mov') }}" autoplay loop preload muted
+                    ></video>
+                </div>
+            </div>
+        </section>
+
+        {% block scripts %}
+            <script src="{{ asset('js/aos.js') }}"></script>
+            <script src="{{ asset('js/projects.js') }}"></script>
+        {% endblock scripts %}
+    </body>
+
+{% endblock body %}

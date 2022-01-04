@@ -1,0 +1,243 @@
+// PAGE D'ACCUEIL
+#home {
+
+  /* ------ HEADER ------ */
+
+  // DIV ABSOLUTE POSITIONNED
+  .cercleContainer {
+    top: 36%;
+    left: 70%;
+    height: 200px;
+    overflow: hidden;
+  }
+
+  .cercle {
+    width: 300px;
+    height: 300px;
+    background-color: $dark;
+    border-radius: 50%;
+  }
+
+  .linkedinLogo {
+    right: -10px;
+
+    div {
+      background-image: url("../../public/assets/logos/linkedin-icon_dark.svg");
+      background-size: contain;
+      width: 43px;
+      height: 43px;
+
+
+      &:hover {
+        background-size: contain;
+        background-image: url("../../public/assets/logos/linkedin-icon_light.svg");
+      }
+    }
+  }
+
+
+  span {
+    color: $dark;
+  }
+
+  // HEADER (text du hero)
+  header {
+    width: 100vw;
+    height: 100vh;
+  }
+
+  header h1 {
+    width: 75vw;
+    margin: 50px auto;
+    font-size: 6em;
+  }
+
+  /* ANIMATION DES LETTRES CHANGEANTES DANS LE HERO BANNER */
+  .text {
+
+    &:after {
+      content: '';
+      width: 6px;
+      height: 100px;
+      top: 7px;
+      right: -5;
+      position: absolute;
+      background-color: $dark;
+      animation: blink 1s infinite ease;
+    }
+  }
+
+  @keyframes blink {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+
+  };
+
+  // DESCRIPTION (h2 + p)
+  .description {
+    margin: 50px 0;
+  }
+
+  h2 {
+    font-size: 5.5em;
+    line-height: 100px;
+    letter-spacing: -0.5px;
+
+    span:hover {
+      color: $light;
+      -webkit-text-stroke: 1px $dark;
+    }
+
+  }
+
+  .miniText {
+    justify-content: flex-end;
+
+    p {
+      font-size: 3.5em;
+      width: 60%;
+      line-height: 70px;
+      mix-blend-mode: luminosity;
+
+      a {
+        color: $dark;
+        text-decoration: none;
+
+        &:hover {
+          color: $light;
+          -webkit-text-stroke: 1px $dark;
+
+        }
+      }
+    }
+  }
+
+  //  PHOTOS EN ABSOLUTE
+  .photoRando {
+    width: 50%;
+    z-index: -1;
+    top: 35%;
+    transition: all ease 10s;
+  }
+
+  .photoToulouse {
+    z-index: -1;
+    width: 50%;
+    left: 40%;
+    top: 10%;
+  }
+
+  // SKILLS
+  .skills {
+    margin: 80px 0;
+
+    h2 {
+      font-size: 8em;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    .row {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      margin-top: 50px;
+
+      div {
+        margin: 0 auto;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        grid-column: span 6;
+        width: 60%;
+
+        h3 {
+          font-size: 2em;
+        }
+
+        img {
+          margin: 30px 0;
+        }
+
+        p {
+          font-size: 1.2em;
+          text-align: center;
+        }
+      }
+
+    }
+
+  }
+
+  @media screen and(max-width: 992px) {
+    header h1 {
+      font-size: 5em;
+    }
+
+    .cercle {
+      display: none;
+    }
+
+    .description{
+      h2{
+        font-size: 4em;
+        letter-spacing: -1px;
+      }
+
+      p{
+        font-size: 2em;
+        line-height: 60px;
+        padding-bottom: 30px;
+      }
+    }
+
+    .photoRando{
+      top: 50%;
+    }
+
+  }
+
+  @media screen and(max-width: 768px) {
+
+  }
+
+  @media screen and(max-width: 576px) {
+    header h1 {
+      font-size: 4em;
+      line-height: 1.5em;
+    }
+
+    .linkedinLogo div{
+      width: 30px;
+      height: 30px;
+    }
+
+    .description{
+      h2{
+        font-size: 3em;
+        letter-spacing: -1px;
+      }
+
+      p{
+        font-size: 2em;
+        line-height: 50px;
+        padding-bottom: 30px;
+      }
+    }
+
+    .skills {
+
+      .row div {
+        grid-column: span 12;
+      }
+    }
+  }
+}
+
+
+
+
+

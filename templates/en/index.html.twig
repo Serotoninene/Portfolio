@@ -1,0 +1,111 @@
+{% extends 'en/base.html.twig' %}
+
+{% block title %} Homepage {% endblock title %}
+
+{% block styles %}
+    <link rel="stylesheet" href="{{ asset('css/aos.css') }}">
+{% endblock styles %}
+
+{% block body %}
+<body id="home">
+    <div class="loader">
+        <h2 class = "loader-percentage"></h2>
+    </div>
+
+    <header>
+
+        {# ABSOLUTE POSITIONNED DIV : CIRCLE #}
+        <div class="cercleContainer absolute" data-aos="fade-up">
+            <div class="cercle resp"></div>
+        </div>
+
+        {# -------------- JUMBOTRON -------------- #}
+        <h1 >
+            Hello, my name is <br id = "br" class="br">
+            <span class="relative">
+                Alex.
+                <a class="linkedinLogo absolute" target="_blank" href="https://www.linkedin.com/in/alexandre-pujol-333172b3/">
+                    <div></div>
+                </a>
+            </span> <br> I'm a <br class="br">
+            <span class="textwrapper relative">
+                <span class = "text"> </span>
+            </span>
+            <br>full stack developer
+        </h1>
+        
+
+    </header>
+
+
+    <main class="container ">
+
+        {# -------------- DESCRIPTION --------------  #}
+
+        <section class="description relative">
+
+            <div class="absolute photoRando">
+                <img src="{{ asset('assets/photos/photoRando.png') }}" id="rando" alt="Alex en randonnée" class="resp">
+            </div>
+            <div class="photoToulouse absolute none">
+                <img src="{{ asset('assets/photos/photoToulouse.jpg') }}" alt="Toulouse" id="toulouse" class="resp">
+            </div>
+            <h2 > I am a young developer <br> from <span class="toulouse">Toulouse</span>, France, passionate about web development and eager to learn </h2>
+            <div class="miniText flex">
+                <p> This is me. Okay not in my work outfit but in the same mood for discoveries, sometimes I draw <a target="_blank" href="https://www.instagram.com/serotoninene/">illustrations</a> and I'm a terrible cook.  </p>
+            </div>
+
+        </section>
+
+        {# -------------- SKILLS --------------  #}
+        <section class="skills">
+
+            <h2>SKILLS</h2>
+
+            {# FIRST LINE #}
+            <div class="flex row" data-aos="fade-up">
+
+                <div class="flex">
+
+                    <h3>Design</h3>
+                    <img src="{{ asset('assets/icons/design_icon.svg') }}" alt="Design Icon">
+                    <p>Adobe Suite(Photoshop,Illustrator, XD), Figma, Procreate</p>
+
+                </div>
+
+                <div class="flex">
+
+                    <h3>Front-end</h3>
+                    <img src="{{ asset('assets/icons/front-end_icon.svg') }}" alt="Design Icon">
+                    <p>HTML, CSS, SCSS, Javascript, <br>ReactJS, GSAP</p>
+
+                </div>
+            </div>
+
+            {# SECOND LINE #}
+            <div class="flex row" data-aos="fade-up">
+                <div class="flex">
+                    <h3>Back-end</h3>
+                    <img src="{{ asset('assets/icons/back-end_icon.svg') }}" alt="Design Icon">
+                    <p>PHP, MySQL, Apache, <br> Nodejs, Symfony</p>
+                </div>
+                <div class="flex">
+                    <h3>Others</h3>
+                    <img src="{{ asset('assets/icons/others_icon.svg') }}" alt="Design Icon">
+                    <p>Trilingual (French, English, Spanish), master in marketing and management</p>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    {% block scripts %}
+        <script src="{{ asset('js/changingLetters.js') }}"></script>
+        <script src="{{ asset('js/aos.js') }}"></script>
+        <script src="{{ asset('js/index.js') }}"></script>
+        <script src="{{ asset('js/loader.js') }}"></script>
+    {% endblock scripts %}
+
+</body>
+{% endblock body %}

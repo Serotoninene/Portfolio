@@ -1,0 +1,103 @@
+{% extends 'fr/base_fr.html.twig' %}
+
+{% block title %} Accueil {% endblock title %}
+
+{% block styles %}
+    <link rel="stylesheet" href="{{ asset('css/aos.css') }}">
+{% endblock styles %}
+
+{% block body %}
+<body id="home">
+    <header>
+
+        {# ABSOLUTE POSITIONNED DIV : CIRCLE #}
+        <div class="cercleContainer absolute" data-aos="fade-up">
+            <div class="cercle resp"></div>
+        </div>
+
+        {# -------------- JUMBOTRON -------------- #}
+        <h1 >
+            Bonjour ! Je suis <br class="br">
+            <span class="relative">
+                Alex.
+                <a class="linkedinLogo absolute" target="_blank" href="https://www.linkedin.com/in/alexandre-pujol-333172b3/">
+                    <div></div>
+                </a>
+            </span> <br> Un jeune <br> fullstack développeur
+
+        </h1>
+
+    </header>
+
+
+    <main class="container ">
+
+        {# -------------- DESCRIPTION --------------  #}
+
+        <section class="description relative">
+
+            <div class="absolute photoRando">
+                <img src="{{ asset('assets/photos/photoRando.png') }}" alt="Alex en randonnée" class="resp">
+            </div>
+            <div class="photoToulouse absolute none">
+                <img src="{{ asset('assets/photos/photoToulouse.jpg') }}" alt="" class="resp">
+            </div>
+            <h2 > Je suis un jeune développeur<br> de  <span class="toulouse">Toulouse</span> passionné et motivé</h2>
+            <div class="miniText flex">
+                <p> Me voici prêt à conquérir les sommets des mondes du développement et du design web,  à mes heures perdues, je dessines également des <a target="_blank" href="https://www.instagram.com/serotoninene/">illustrations</a> :) </p>
+
+            </div>
+
+        </section>
+
+        {# -------------- SKILLS --------------  #}
+        <section class="skills">
+            <br> <br> <br> <br>
+            <h2>COMPÉTENCES</h2>
+
+            {# FIRST LINE #}
+            <div class="flex row" data-aos="fade-up">
+
+                <div class="flex">
+
+                    <h3>Design</h3>
+                    <img src="{{ asset('assets/icons/design_icon.svg') }}" alt="Design Icon">
+                    <p>Adobe Suite(Photoshop,Illustrator, XD), Figma, Procreate</p>
+
+                </div>
+
+                <div class="flex">
+
+                    <h3>Front-end</h3>
+                    <img src="{{ asset('assets/icons/front-end_icon.svg') }}" alt="Design Icon">
+                    <p>HTML, CSS, SCSS, Javascript, <br>ReactJS, GSAP</p>
+
+                </div>
+            </div>
+
+            {# SECOND LINE #}
+            <div class="flex row" data-aos="fade-up">
+                <div class="flex">
+                    <h3>Back-end</h3>
+                    <img src="{{ asset('assets/icons/back-end_icon.svg') }}" alt="Design Icon">
+                    <p>PHP, MySQL, Apache, <br> Nodejs, Symfony</p>
+                </div>
+                <div class="flex">
+                    <h3>Autre</h3>
+                    <img src="{{ asset('assets/icons/others_icon.svg') }}" alt="Design Icon">
+                    <p>Trilingual (French, English, Spanish), master in marketing and management</p>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    {% block scripts %}
+        <script src="{{ asset('js/changingLetters.js') }}"></script>
+        <script src="{{ asset('js/aos.js') }}"></script>
+        <script src="{{ asset('js/index.js') }}"></script>
+    {% endblock scripts %}
+
+</body>
+{% endblock body %}

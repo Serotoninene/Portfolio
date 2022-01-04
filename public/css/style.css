@@ -1,0 +1,441 @@
+/* PARTIALS */
+/* VARIABLES */
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+  font-family: futura;
+  font-weight: 400;
+  letter-spacing: 1px;
+  color: #707070; }
+
+body {
+  background-color: #F3EBE7; }
+
+/* SERVICES */
+.container {
+  width: 90%;
+  margin: 0 auto; }
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr); }
+
+.flex {
+  display: flex; }
+
+.absolute {
+  position: absolute; }
+
+.relative {
+  position: relative; }
+
+.resp {
+  width: 100%; }
+
+.border {
+  border: solid 1px #2B2B2B; }
+
+.br {
+  display: none; }
+
+.none {
+  display: none; }
+
+/* NAVBAR */
+navbar {
+  justify-content: space-around;
+  align-items: center;
+  font-size: 1.5em;
+  padding-top: 30px; }
+  navbar .logoSite {
+    width: 3vw; }
+  navbar ul {
+    width: 50vw;
+    justify-content: space-between; }
+    navbar ul a {
+      text-decoration: none;
+      color: #2B2B2B; }
+      navbar ul a:hover {
+        text-decoration: underline; }
+  navbar p a {
+    text-decoration: none; }
+    navbar p a:hover {
+      color: #F3EBE7;
+      -webkit-text-stroke: 1px #707070; }
+
+/* FOOTER */
+footer {
+  margin-top: 50px; }
+  footer ul:last-child {
+    margin-top: 50px;
+    background-color: #707070;
+    padding: 50px 0;
+    justify-content: space-around; }
+    footer ul:last-child a {
+      color: #F3EBE7;
+      text-decoration: none;
+      font-size: 1.5rem; }
+      footer ul:last-child a:hover {
+        color: #707070;
+        -webkit-text-stroke: 1px #F3EBE7; }
+
+@media screen and (max-width: 992px) {
+  header h1 {
+    font-size: 5em; }
+
+  .cercle {
+    display: none; }
+
+  footer navbar {
+    margin-bottom: 50px; }
+  footer ul:last-child {
+    display: none; } }
+@media screen and (max-width: 768px) {
+  navbar ul {
+    width: 55vw; }
+  navbar li {
+    font-size: 1.3rem; }
+  navbar p {
+    font-size: 1rem; } }
+@media screen and (max-width: 576px) {
+  navbar ul {
+    width: 55vw; }
+  navbar li {
+    font-size: 0.7rem; }
+  navbar p {
+    font-size: 0.5rem; } }
+#projects section:nth-of-type(1) {
+  margin-top: 100px; }
+  #projects section:nth-of-type(1) hr {
+    margin: 0 0 10px 0; }
+#projects hr {
+  margin: 50px 0; }
+#projects .description {
+  padding: 1px;
+  grid-column: span 3;
+  flex-direction: column;
+  justify-content: space-between; }
+  #projects .description h1 {
+    font-weight: bold;
+    font-size: 2rem; }
+  #projects .description h2 {
+    color: #2B2B2B;
+    font-size: 0.9rem; }
+  #projects .description p {
+    margin-top: 10px;
+    padding: 2px; }
+#projects .video {
+  justify-content: center;
+  align-items: flex-end;
+  padding-top: 10px;
+  grid-column: span 9;
+  transform-style: preserve-3d;
+  perspective: 10px; }
+  #projects .video img {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    height: 100%; }
+
+#home {
+  /* ------ HEADER ------ */
+  /* ANIMATION DES LETTRES CHANGEANTES DANS LE HERO BANNER */ }
+  #home .cercleContainer {
+    top: 36%;
+    left: 70%;
+    width: 300px;
+    height: 200px;
+    overflow: hidden; }
+  #home .cercle {
+    width: 300px;
+    height: 300px;
+    background-color: #2B2B2B;
+    border-radius: 50%; }
+  #home .linkedinLogo {
+    right: -10px; }
+    #home .linkedinLogo div {
+      background-image: url("../assets/logos/linkedin-icon_dark.svg");
+      background-size: contain;
+      width: 43px;
+      height: 43px; }
+      #home .linkedinLogo div:hover {
+        background-size: contain;
+        background-image: url("../assets/logos/linkedin-icon_light.svg"); }
+  #home span {
+    color: #2B2B2B; }
+  #home header {
+    width: 100vw;
+    height: 100vh; }
+  #home header h1 {
+    width: 75vw;
+    margin: 50px auto;
+    font-size: 6em; }
+  #home .arrow {
+    bottom: -5%;
+    width: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+  #home .text:after {
+    content: '';
+    width: 6px;
+    height: 90%;
+    top: 7px;
+    right: -5;
+    position: absolute;
+    background-color: #2B2B2B;
+    animation: blink 1s infinite ease; }
+@keyframes blink {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+  #home .description {
+    margin: 50px 0; }
+  #home h2 {
+    font-size: 5.5em;
+    line-height: 100px;
+    letter-spacing: -0.5px;
+    mix-blend-mode: difference; }
+    #home h2 span:hover {
+      color: #F3EBE7;
+      -webkit-text-stroke: 1px #2B2B2B; }
+  #home .miniText {
+    justify-content: flex-end;
+    align-items: center;
+    padding-left: 100px; }
+    #home .miniText p {
+      font-size: 3.5em;
+      width: 60%;
+      line-height: 70px;
+      mix-blend-mode: luminosity; }
+      #home .miniText p a {
+        color: #2B2B2B;
+        text-decoration: none; }
+        #home .miniText p a:hover {
+          color: #F3EBE7;
+          -webkit-text-stroke: 1px #2B2B2B; }
+  #home .photoRando {
+    width: 50%;
+    z-index: -1;
+    top: 45%;
+    transition: all ease 10s; }
+  #home .photoToulouse {
+    z-index: -1;
+    width: 50%;
+    left: 40%;
+    top: 10%; }
+  #home .skills {
+    margin: 200px 0 80px 0; }
+    #home .skills h2 {
+      font-size: 8em;
+      text-align: center;
+      font-weight: bold; }
+    #home .skills .row {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      margin-top: 50px; }
+      #home .skills .row div {
+        margin: 0 auto;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        grid-column: span 6;
+        width: 60%; }
+        #home .skills .row div h3 {
+          font-size: 2em; }
+        #home .skills .row div img {
+          margin: 30px 0; }
+        #home .skills .row div p {
+          font-size: 1.2em;
+          text-align: center; }
+  #home .loader {
+    height: 100vh;
+    width: 100vw;
+    background-color: #F3EBE7;
+    z-index: 100;
+    position: fixed;
+    top: 0;
+    overflow: hidden;
+    opacity: 1;
+    pointer-events: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity ease-out 0.2s; }
+  #home .loader.hidden {
+    opacity: 0;
+    pointer-events: none; }
+  #home .loader-percentage {
+    font-family: morison; }
+  @media screen and (min-width: 1920px) {
+    #home header h1 {
+      font-size: 8.5em;
+      margin-top: 100px; }
+    #home .cercleContainer {
+      top: 45%; }
+    #home .description h2 {
+      font-size: 6em;
+      line-height: 130px; }
+    #home .description p {
+      font-size: 4em;
+      line-height: 100px;
+      padding-top: 150px; }
+    #home .skills {
+      margin-top: 430px; }
+      #home .skills .row div h3 {
+        font-size: 3em; }
+      #home .skills .row div p {
+        font-size: 2em; } }
+  @media screen and (min-width: 2200px) and (max-width: 2700px) {
+    #home #br {
+      display: block; }
+    #home header h1 {
+      font-size: 9em;
+      margin-top: 300px; } }
+  @media screen and (min-width: 1989px) and (max-width: 2199px) {
+    #home #br {
+      display: block; }
+    #home header h1 {
+      margin-top: 150px; } }
+  @media screen and (min-width: 1680px) and (max-width: 1919px) {
+    #home header h1 {
+      font-size: 8em;
+      margin-top: 150px; }
+    #home .cercleContainer {
+      top: 45%; }
+    #home .description h2 {
+      font-size: 6em;
+      line-height: 130px; }
+    #home .description p {
+      font-size: 4em;
+      line-height: 100px;
+      padding-top: 100px; }
+    #home .skills {
+      margin-top: 310px; } }
+  @media screen and (min-width: 1536px) and (max-width: 1679px) {
+    #home header h1 {
+      font-size: 7em;
+      margin-top: 50px; }
+    #home .description p {
+      padding-top: 150px; }
+    #home .skills {
+      margin-top: 310px; } }
+  @media screen and (min-width: 1440px) and (max-width: 1535px) {
+    #home header h1 {
+      font-size: 6.5em;
+      padding-top: 50px; }
+    #home .description p {
+      padding-top: 150px; }
+    #home .skills {
+      margin-top: 310px; } }
+  @media screen and (min-width: 1366px) and (max-width: 1439px) {
+    #home header h1 {
+      margin-top: 70px; }
+    #home .description p {
+      margin-top: 20px; }
+    #home .skills {
+      margin-top: 240px; } }
+  @media screen and (max-width: 1150px) {
+    #home header h1 {
+      font-size: 5em;
+      margin-top: 100px; }
+    #home .cercle {
+      width: 200px;
+      height: 200px; } }
+  @media screen and (max-width: 992px) {
+    #home header h1 {
+      margin-top: 100px;
+      font-size: 5em; }
+    #home .cercle {
+      display: none; }
+    #home .description h2 {
+      font-size: 4em;
+      letter-spacing: -1px; }
+    #home .description p {
+      font-size: 2em;
+      line-height: 60px;
+      padding-bottom: 30px; }
+    #home .photoRando {
+      top: 50%; } }
+  @media screen and (max-width: 895px) {
+    #home .br {
+      display: none; } }
+  @media screen and (max-width: 768px) {
+    #home header h1 {
+      margin-top: 20px;
+      font-size: 4em;
+      line-height: 1.3em; }
+    #home .br {
+      display: inline-block; } }
+  @media screen and (max-width: 576px) {
+    #home .linkedinLogo div {
+      width: 30px;
+      height: 30px; }
+    #home .description h2 {
+      font-size: 3em;
+      letter-spacing: -1px; }
+    #home .description p {
+      font-size: 2em;
+      line-height: 50px;
+      padding-bottom: 30px; }
+    #home .skills .row div {
+      grid-column: span 12; } }
+  @media screen and (max-width: 375px) {
+    #home header {
+      height: 100vh;
+      padding-top: 5vh; }
+      #home header h1 {
+        font-size: 3em;
+        line-height: 1.5em; }
+      #home header .linkedinLogo div {
+        width: 20px;
+        height: 20px; }
+    #home .description h2 {
+      font-size: 1.5em;
+      letter-spacing: -1px;
+      line-height: 1.4em; }
+    #home .description .miniText {
+      justify-content: flex-start;
+      line-height: 3em; }
+    #home .description .photoRando {
+      top: -120%;
+      left: 50%; }
+    #home .description p {
+      width: 100%;
+      font-size: 1.5em;
+      line-height: 1.4em;
+      padding-bottom: 30px; }
+    #home .skills h2 {
+      font-size: 4em; } }
+  @media screen and (max-width: 370px) {
+    #home header {
+      height: 80vh;
+      padding-top: 0px; }
+      #home header h1 {
+        font-size: 2.5em; }
+    #home .description h2 {
+      font-size: 1.5em;
+      letter-spacing: -1px;
+      line-height: 1.4em; }
+    #home .description .photoRando {
+      top: 80%;
+      left: 40%; }
+    #home .description p {
+      width: 100%;
+      font-size: 1.5em;
+      line-height: 1.4em;
+      padding-bottom: 30px; } }
+
+#resume .cv {
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  margin-top: 50px; }
+#resume .cv img {
+  width: 30%;
+  margin: 25px;
+  transition: width 0.4s ease-in-out; }
+  #resume .cv img:hover {
+    width: 95%; }
+
+/*# sourceMappingURL=style.css.map */
